@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Days Table</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+        <a href="/"><b>Weekly Schedule</b></a> | 
+        <a href="/dashboard"><b>Go to Dashboard</b></a> | 
+        <a href="/profile"><b>Go to Profile</b></a>
+    </div>
+
+    <h2 align="left">Weekly Schedule & Budget</h2>
+
+    <table border="1" align="left" cellpadding="0" cellspacing="1">
+        <tr>
+            <th>Days</th>
+            <th>Daily Budget</th>
+            <th>Status</th>
+        </tr>
+        
+        {% for item in weekdays %}
+        <tr>
+            <td>{{ item['day'] }}</td>
+            <td>{{ item['budget'] }}</td>
+            <td>{{ item['status'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
